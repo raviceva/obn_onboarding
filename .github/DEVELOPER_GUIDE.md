@@ -29,3 +29,11 @@ This guide defines the *simple* workflow every developer must follow:
 ```bash
 git checkout development
 git pull origin development
+
+---
+
+## 📘 Task-Specific Developer Guides
+
+For detailed implementation instructions on individual tasks, refer to the task guides below:
+
+- [WhatsApp OTP Implementation Guide](https://github.com/raviceva/obn_onboarding/blob/main/.github/TASK_GUIDE_WHATSAPP_OTP.md)
