@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Login With MPIN - Full Request",
+  "type": "object",
+  "properties": {
+    "jheader": {
+      "type": "object",
+      "properties": {
+        "ip": { "type": "string" },
+        "version": { "type": "string" },
+        "channel": { "type": "string" ,"minLength": 6 },
+        "requestType": { "type": "string" },
+        "imeiNo": { "type": "string" },
+        "serialNo": { "type": "string" },
+        "deviceType": { "type": "string" },
+        "osType": { "type": "string" },
+        "macAddress": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["requestType", "userId" ,"channel"],
+      "additionalProperties": true   
+    },
+    "jbody": {
+      "type": "object",
+      "properties": {
+		 "mobileNumber": { "type": "string" },
+		  "otp": { "type": "string" }
+      },
+      "required": [ "mobileNumber", "otp"],
+      "additionalProperties": false   
+    }
+  },
+  "required": ["jheader", "jbody"],
+  "additionalProperties": false    
+}
